@@ -115,7 +115,7 @@ function analyse() {
   var widthContainer = document.getElementById("container").offsetWidth;
 
   //Making the object increase in floating behaviour (to the left) slower (feels less like we're controlling the output with our sounds, it feels more like we're affecting it)
-  floatX = floatX + (db/50);
+  floatX = floatX + (db/30);
   //Decoupling the output of the object from the input, making the balloon float back on its own accord
   floatX = floatX * 0.99;
   
