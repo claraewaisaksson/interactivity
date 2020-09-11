@@ -117,6 +117,7 @@ function analyse() {
   //Making the object increase in floating behaviour (to the left) slower (feels less like we're controlling the output with our sounds, it feels more like we're affecting it)
   floatX = floatX + (db/30);
   //Decoupling the output of the object from the input, making the balloon float back on its own accord
+  //This 0.99 makes the balloon more resistant to go back to the left the closer it is to the far left. I think that's interesting because it's doing it on it's own accord without regards to the input.
   floatX = floatX * 0.99;
   
   //clamping the floating to stay between 0 and 1
@@ -227,7 +228,7 @@ function updateDisplay() {
   
   var image = document.getElementById("image")
 
-  var calc = heightContainer/300 * currentBpm
+  var calc = heightContainer/200 * currentBpm
 
   //We logged the height and the calc to see if these were working as expected.
   //console.log(heightContainer)
