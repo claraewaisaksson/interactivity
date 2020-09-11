@@ -7,6 +7,9 @@ let visualiser = null;
 let intervalMeter = new IntervalMeter(5, 200);
 //let intervalMeter2 = new IntervalMeter(5, 1000);
 
+let floatX = 0;
+
+
 if (document.readyState != 'loading') {
   onDocumentReady();
 } else {
@@ -111,7 +114,20 @@ function analyse() {
 
   var widthContainer = document.getElementById("container").offsetWidth;
 
-  var newCalc = widthContainer * db;
+  //Making the object increase in floating behaviour (to the left) slower (feels less like we're controlling the output with our sounds, it feels more like we're affecting it)
+  floatX = floatX + (db/50);
+  //Decoupling the output of the object from the input, making the balloon float back on its own accord
+  floatX = floatX * 0.99;
+  
+  //clamping the floating to stay between 0 and 1
+  if(floatX > 1){
+    floatX = 1
+  } else if(floatX < 0) {
+    floatX = 0
+  }
+
+  //Making the object float relatively to the width of the container
+  var newCalc = (widthContainer - 100) * floatX;
 
   //Changed from "px" to "%" because the balloon reacts more "lively" or "energized" now.
   image.style.paddingLeft = newCalc + "%";
