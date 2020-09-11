@@ -15,9 +15,9 @@ body {
   transition: background-color ease-in-out 0.3s;
 }
 
-.hit {
+/* .hit {
   background-color: deeppink;
-}
+} */
 
 #image {
   padding-top: 0;
@@ -36,8 +36,8 @@ body {
   width: 320px;
 }
 
-.target {
+/* .target {
   padding: 1em;
   border: 1px solid dimgray;
   display: inline-block;
-}
+} */

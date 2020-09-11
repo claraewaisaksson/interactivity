@@ -142,7 +142,7 @@ function analyse() {
 }*/
 
 //Print out the frequency of bin 18 that we're using.
-document.getElementById('frequency18').innerText = Math.round(freq[magicBucket]) + ' frequency';
+// document.getElementById('frequency18').innerText = Math.round(freq[magicBucket]) + ' frequency';
 
   // An alternative approach is to check for a peak, regardless of freq
   //let hit = thresholdPeak(wave, 0.004);
@@ -193,8 +193,8 @@ function updateDisplay() {
   const l = relative * 80;
 
   // Update text readout
-  document.getElementById('intervalMs').innerText = parseInt(currentIntervalMs) + ' ms.';
-  document.getElementById('intervalBpm').innerText = currentBpm + ' bpm.';
+  // document.getElementById('intervalMs').innerText = parseInt(currentIntervalMs) + ' ms.';
+  // document.getElementById('intervalBpm').innerText = currentBpm + ' bpm.';
   
 
   // Set colour
