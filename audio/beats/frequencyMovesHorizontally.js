@@ -127,7 +127,7 @@ function analyse() {
   }
 
   //Making the object float relatively to the width of the container
-  var newCalc = (widthContainer - 100) * floatX;
+  var newCalc = (widthContainer - 200) * floatX;
 
   //Changed from "px" to "%" because the balloon reacts more "lively" or "energized" now.
   image.style.paddingLeft = newCalc + "%";
