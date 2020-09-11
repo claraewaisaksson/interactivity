@@ -10,15 +10,29 @@
 
 <body>
   <h1>beats</h1>
+
+  <div id="container">
+    <div id="image">
+      <img src="balloon.png" id="balloon">
+    </div>
+  </div>
+
   <div class="target" id="hit">Peak threshold</div>
   <div id="intervalMs">
 
   </div>
   <div id="intervalBpm"></div>
+  <div id="frequency18"></div>
   <div id="visualiser"></div>
   <script src="../util.js"></script>
   <script src="../visualiser.js"></script>
-  <script src="script.js"></script>
+
+  <!--Accessing different experiments through activating different JS files-->
+  <!-- <script src="upAndDownBalloon.js"></script> -->
+  <!-- <script src="ballAppear.js"></script> -->
+  <script src="frequencyMovesHorizontally.js"></script>
+  <!-- <script src="amplitude.js"></script> -->
+
 </body>
 
 </html>

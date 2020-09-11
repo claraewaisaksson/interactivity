@@ -19,6 +19,21 @@ body {
   background-color: deeppink;
 }
 
+#image {
+  padding-top: 0;
+  padding-left: 0;
+  transition: all ease-in-out 0.5s;
+}
+
+/* #balloon {
+  width: 80px;
+} */
+
+#container {
+  height: 500px;
+  width: 320px;
+}
+
 .target {
   padding: 1em;
   border: 1px solid dimgray;
