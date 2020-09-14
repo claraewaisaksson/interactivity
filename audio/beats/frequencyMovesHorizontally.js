@@ -7,7 +7,10 @@ let visualiser = null;
 let intervalMeter = new IntervalMeter(5, 200);
 //let intervalMeter2 = new IntervalMeter(5, 1000);
 
+//horizontal float
 let floatX = 0;
+//vertical float
+let floatY = 0;
 
 
 if (document.readyState != 'loading') {
@@ -240,7 +243,34 @@ function updateDisplay() {
     image.style.paddingTop = 400 + "px";
   } else {
     image.style.paddingTop = calc + "px";
-  }  
+  }
+
+  /* Make balloon float up on its own (NOT TESTED)
+  let curBpm = currentBpm;
+
+  curBpm = curBpm/270;
+
+  if(curBpm > 1) {
+    curBpm = 1
+  } else if(curBpm < 0) {
+    curBpm = 0
+  }
+
+  let heightContainer = document.getElementById("container").offsetHeight;
+
+  floatY = floatY + (curBpm/30);
+
+  floatY = floatY * 0.99;
+
+  if(floatY > 1){
+    floatY = 1
+  } else if(floatY < 0){
+    floatY = 0
+  }
+
+  let calc = heightContainer/200 * curBpm;
+
+  image.style.paddingTop = calc + "px";*/
 
 }
 
