@@ -90,7 +90,7 @@ function analyse() {
 
   // Determine pulse if frequency threshold is exceeded.
   // -60 was determined empirically, you'll need to find your own threshold
-  let hit = (freq[magicBucket] > -80);
+  let hit = (freq[magicBucket] > -100);
 
   //Want the balloon to stray slowly back to left when sound has receeded.
   /*
@@ -239,8 +239,8 @@ function updateDisplay() {
   //console.log(calc);
 
   //Constraining the balloon to stay within the container by making it float up to the top if it reaches the bottom.
-  if(currentBpm > 270) {
-    image.style.paddingTop = 400 + "px";
+  if(currentBpm > 470) {
+    image.style.paddingTop = heightContainer + "px";
   } else {
     image.style.paddingTop = calc + "px";
   }
