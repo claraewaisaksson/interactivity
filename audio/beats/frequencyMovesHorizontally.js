@@ -89,8 +89,8 @@ function analyse() {
 
 
   // Determine pulse if frequency threshold is exceeded.
-  // -60 was determined empirically, you'll need to find your own threshold
-  let hit = (freq[magicBucket] > -100);
+  // -120 is quite responsive. works well in a quiet environment.
+  let hit = (freq[magicBucket] > -120);
 
   //Want the balloon to stray slowly back to left when sound has receeded.
   /*
@@ -238,12 +238,31 @@ function updateDisplay() {
 
   //console.log(calc);
 
+  //Making object start from bottom going up due to BPM
+  if(currentBpm > 1 && currentBpm < (window.innerHeight/2)) {
+    // let diffFromPossibleMax = window.innerHeight ;
+    let newPaddingTop = (window.innerHeight - (currentBpm * 4))
+    // If new padding is less than zero due to a small window then set it to 0px
+    if( newPaddingTop < 0 )
+    {
+      image.style.paddingTop = 0 + "px";
+    }
+    // Else set the paddingTop with the new value
+    else{
+      image.style.paddingTop = newPaddingTop + "px";
+    }
+  }
+  // When there is no sound set the ballon position to the lowest minus a small margin for the balloon image
+  else {
+    image.style.paddingTop = window.innerHeight - 150 + "px";
+  } 
+
   //Constraining the balloon to stay within the container by making it float up to the top if it reaches the bottom.
-  if(currentBpm > 470) {
+  /*if(currentBpm > 470) {
     image.style.paddingTop = heightContainer + "px";
   } else {
     image.style.paddingTop = calc + "px";
-  }
+  }*/
 
   /* Make balloon float up on its own (NOT TESTED)
   let curBpm = currentBpm;
