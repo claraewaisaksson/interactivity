@@ -90,7 +90,7 @@ function analyse() {
 
   // Determine pulse if frequency threshold is exceeded.
   // -120 is quite responsive. works well in a quiet environment.
-  let hit = (freq[magicBucket] > -120);
+  let hit = (freq[magicBucket] > -100);
 
   //Want the balloon to stray slowly back to left when sound has receeded.
   /*
@@ -100,6 +100,7 @@ function analyse() {
     image.style.paddingLeft = newCalc + "%";
   }
   */
+  
 
 
   //We want the balloon to move horizontally accordingly to the frequency.
@@ -171,6 +172,7 @@ function analyse() {
   } else {
     document.getElementById('hit').classList.remove('hit');
   }
+
 
   // Optional rendering of data
   visualiser.renderWave(wave, true);
