@@ -49,3 +49,7 @@ body {
   border: 1px solid dimgray;
   display: inline-block;
 } */
+
+#visualiser {
+  display: hidden;
+}

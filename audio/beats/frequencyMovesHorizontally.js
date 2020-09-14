@@ -30,7 +30,7 @@ function onDocumentReady() {
     onMicSuccess, // call this when ready
     error => { console.error('Could not init microphone', error); });
 
-  setInterval(updateDisplay, 300);
+  setInterval(updateDisplay, 50);
 }
 
 // Microphone successfully initalised, we now have access to audio data
